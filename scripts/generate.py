@@ -29,7 +29,7 @@ def parse_arguments():
     )
     parser.add_argument("--output_dir", type=str, default="generated/iter1")
     parser.add_argument("--prompts", type=str, default="UCLA-AGI/data-mistral-7b-instruct-sppo-iter1")
-    parser.add_argument("--maxlen", type=int, default=2048)
+    parser.add_argument("--maxlen", type=int, default=4096)
     parser.add_argument("--pairs", type=int, default=5)
     parser.add_argument("--frac_len", type=int, default=0)
     parser.add_argument("--data_frac", type=int, default=0)
@@ -69,6 +69,8 @@ def main():
         tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct")
     elif "gemma-2" in model_path.lower():
         tokenizer = AutoTokenizer.from_pretrained("google/gemma-2-9b-it")
+    elif "qwen2_moe" in model_path.lower():
+        tokenizer = AutoTokenizer.from_pretrained("xDAN2099/xDAN-L1-qwen2_moe-8x1.5b-Instruct-0701")
     else:
         raise ValueError("Model not supported")
     tokenizer.pad_token = tokenizer.eos_token
