@@ -69,8 +69,8 @@ def main():
         tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B-Instruct")
     elif "gemma-2" in model_path.lower():
         tokenizer = AutoTokenizer.from_pretrained("google/gemma-2-9b-it")
-    elif "qwen2_moe" in model_path.lower():
-        tokenizer = AutoTokenizer.from_pretrained("xDAN2099/xDAN-L1-qwen2_moe-8x1.5b-Instruct-0701")
+    elif "qwen" in model_path.lower():
+        tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2-7B-Instruct")
     else:
         raise ValueError("Model not supported")
     tokenizer.pad_token = tokenizer.eos_token
