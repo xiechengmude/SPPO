@@ -14,7 +14,7 @@ def parse_arguments():
     parser.add_argument("--prompts", type=str, default="UCLA-AGI/data-mistral-7b-instruct-sppo-iter1")
     parser.add_argument("--frac_len", type=int, default=0)
     parser.add_argument("--num_gpu", type=int, default=8)
-    parser.add_argument("--org", type=str, default="UCLA-AGI")
+    parser.add_argument("--org", type=str, default="xDAN2099")
     return parser.parse_args()
 
 def from_ranks(args):
