@@ -6,7 +6,7 @@ for i in $(seq 1 $iter_num); do
     else
         MODEL=$OUTPUT_DIR
     fi
-    OUTPUT_DIR="checkpoints/xDAN-L1-qwen2_moe-8x1.5b-Iter${i}"
+    OUTPUT_DIR="xDAN2099/xDAN-L1-qwen2_moe-8x1.5b-Iter${i}"
     PROMPT="UCLA-AGI/data-mistral-7b-instruct-sppo-iter${i}"
     OUT="data-xDAN-L1-qwen2_moe-8x1.5b-iter${i}"
 
